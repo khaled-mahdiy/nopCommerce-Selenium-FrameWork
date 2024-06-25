@@ -26,9 +26,9 @@ public class TestBase {
     {
         return driver.getTitle();
     }
-//    @AfterClass
-//    public void closeBrowser()
-//    {
-//        driver.quit();
-//    }
+    @AfterClass
+    public void closeBrowser()
+    {
+        driver.quit();
+    }
 }

@@ -17,13 +17,12 @@ public class RegistrationTest extends TestBase{
     public void openRegistrationPage()
     {
         new HomePage(driver).openRegisterPage();
-        Assert.assertEquals(getPageTitle(),new HomePage(driver).pageTitle);
+        Assert.assertEquals(getPageTitle(),new HomePage(driver).registerPageTitle);
     }
     @Test(dependsOnMethods = "openRegistrationPage")
     public void userRegistrationWithValidCred() throws IOException, ParseException {
         registerationPage = new RegisterationPage(driver);
         JSONArray data = new JsonDataReader().jsonReader("registration.json");
-        System.out.println(data);
         for (Object object : data)
         {
             JSONObject jsOnObject = (JSONObject) object;

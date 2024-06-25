@@ -9,9 +9,12 @@ public class HomePage extends PageBase{
     }
 
     //Elements
-    public String pageTitle = "nopCommerce demo store. Register";
-    By registerLink = By.linkText("Register");
+    public static String registerPageTitle = "nopCommerce demo store. Register";
+    public static String loginPageTitle = "nopCommerce demo store. Login";
+    public static String homePageTitle = "https://demo.nopcommerce.com/";
 
+    By registerLink = By.linkText("Register");
+    By loginLink    = By.linkText("Log in");
     //Actions & Methods
     public void openRegisterPage()
     {
@@ -19,5 +22,10 @@ public class HomePage extends PageBase{
         waitForElementToBeClickable(registerLink);
         clickOnButton(registerLink);
     }
-
+    public void openLoginPage()
+    {
+        waitForVisibilityOfElement(loginLink);
+        waitForElementToBeClickable(loginLink);
+        clickOnButton(loginLink);
+    }
 }
