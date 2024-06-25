@@ -1,0 +1,10 @@
+[
+  {
+    "gender"      : "male",
+    "firstname"   : "Khaled",
+    "lastname"    : "Mahdy",
+    "email"       : "khaled_mahdy@gmail.com",
+    "companyname" : "nopcommerce",
+    "password" : "123456"
+  }
+]
